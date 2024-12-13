@@ -1,0 +1,14 @@
+services:
+  backend:
+    image: devsuvamjyoti/watch-store:v2
+    container_name: watch-store-server
+    ports:
+      - "4000:4000"
+    env_file:
+      - .env
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
